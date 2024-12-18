@@ -1,4 +1,4 @@
-inp = int(input())
+inp = int(input("Введите значение, до которого должен быть построен треугольник Паскаля "))
 
 def pascal(k, tr=None):
     if tr is None:
@@ -10,4 +10,5 @@ def pascal(k, tr=None):
         new_tr = [1] + [sum(i) for i in zip(prev_tr, prev_tr[1:])] + [1]
         return pascal(k - 1, tr + [new_tr])
     
+print("Вот итог: ")    
 print(pascal(inp))
